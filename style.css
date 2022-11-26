@@ -11,6 +11,7 @@
     --neutral-very-pale-blue: hsl(225, 100%, 98%);
     --neutral-desaturated-blue: hsl(224, 23%, 55%);
     --neutral-dark-blue: hsl(223, 47%, 23%);
+    --white: hsl(0, 0%, 100%);
 }
 
 html {
@@ -26,21 +27,102 @@ body {
 .container {
     display: grid;
     place-content: center;
-    background-color: var(--very-dark-blue);
+    background-color: var(--primary-pale-blue);
     height: 100vh;
 }
 
 .card {
     width: 100%;
     max-width: 330px;
-    background-color: var(--dark-blue);
-    border-radius: 1.5rem;
-    padding: 1.6rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    
+}
+
+.static,
+.inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+    text-align: center;
+   
+}
+.static img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: .8rem;
+}
+
+.static > h1, p {
+    
+    margin: 0 2.5rem;
+    line-height: 1.5rem;
+}
+
+.static h1 {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+p, a {
+    font-size: .9rem;
 }
 
 
+.trio {
+    /* width: 90%; */
+    /* margin: 1rem 2.5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+    justify-items: center;
+    margin: 1rem 1.5rem;
+    background-color: var(--neutral-very-pale-blue);
+    border-radius: .5rem;
+    
+    
+}
 
+.trio > * {
+    margin: 0;
+    padding: 1rem;
+    align-self: center;
+    
+}
 
+.trio > p {
+    padding-left: 0;
+}
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.trio > a {
+    font-size: .8rem;
+}
+
+p > span, a {
+    font-weight: 700;
+}
+
+button {
+    margin: 0 1.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);
+    background-color: var(--primary-bright-blue);
+    font-weight: 900;
+    box-shadow: 0px 15px 20px hsla(245, 75%, 52%, .3);
+    /* box-shadow: 0px 15px 10px var(--primary-pale-blue); */
+    cursor: pointer;
+}
+
+.inputs > a {
+    margin: .5rem 1.5rem 2rem 1.5rem;
+    text-decoration: none;
+    color: var(--neutral-desaturated-blue);
+    /* cursor: pointer; */
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
