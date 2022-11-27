@@ -8,6 +8,7 @@
     /* colors here */
     --primary-pale-blue: hsl(225, 100%, 94%);
     --primary-bright-blue: hsl(245, 75%, 52%);
+    --primary-button-link-hover: hsl(245, 83%, 68%);
     --neutral-very-pale-blue: hsl(225, 100%, 98%);
     --neutral-desaturated-blue: hsl(224, 23%, 55%);
     --neutral-dark-blue: hsl(223, 47%, 23%);
@@ -33,96 +34,114 @@ body {
 
 .card {
     width: 100%;
-    max-width: 330px;
+    max-width: 325px;
     background-color: var(--white);
     border-radius: 1rem;
-    
 }
 
-.static,
-.inputs {
+.content {
     display: flex;
     flex-direction: column;
     row-gap: 1.2rem;
-    text-align: center;
-   
+    align-items: center;
 }
-.static img {
+
+img {
     width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     margin-bottom: .8rem;
 }
 
-.static > h1, p {
-    
-    margin: 0 2.5rem;
-    line-height: 1.5rem;
-}
-
-.static h1 {
+h1 {
     font-size: 1.3rem;
     font-weight: 900;
 }
 
-p, a {
+h1,
+p {
+    width: calc(100% - 5rem);
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+p,
+a,
+button {
     font-size: .9rem;
 }
 
+p {
+    color: var(--neutral-desaturated-blue);
+}
 
 .trio {
-    /* width: 90%; */
-    /* margin: 1rem 2.5rem; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
     justify-items: center;
-    margin: 1rem 1.5rem;
+    margin: .3rem 1.5rem;
     background-color: var(--neutral-very-pale-blue);
-    border-radius: .5rem;
-    
-    
+    border-radius: .7rem;
 }
 
-.trio > * {
+.trio>* {
     margin: 0;
-    padding: 1rem;
+    padding: .9rem;
     align-self: center;
-    
 }
 
-.trio > p {
+.trio>p {
+    width: unset;
     padding-left: 0;
 }
 
-.trio > a {
+.trio>a {
     font-size: .8rem;
 }
 
-p > span, a {
+.trio>a:hover {
+    color: var(--primary-button-link-hover);
+}
+
+p>span,
+a {
     font-weight: 700;
+    color: var(--neutral-dark-blue);
 }
 
 button {
+    width: calc(100% - 3rem);
     margin: 0 1.5rem;
-    padding: 1rem;
+    padding: .9rem 0;
     border: none;
-    border-radius: .5rem;
+    border-radius: .7rem;
     color: var(--white);
     background-color: var(--primary-bright-blue);
-    font-weight: 900;
-    box-shadow: 0px 15px 20px hsla(245, 75%, 52%, .3);
-    /* box-shadow: 0px 15px 10px var(--primary-pale-blue); */
+    font-weight: 700;
+    box-shadow: 0px 15px 30px 5px hsla(245, 75%, 52%, .3);
     cursor: pointer;
 }
 
-.inputs > a {
-    margin: .5rem 1.5rem 2rem 1.5rem;
-    text-decoration: none;
-    color: var(--neutral-desaturated-blue);
-    /* cursor: pointer; */
-
+button:hover {
+    background-color: var(--primary-button-link-hover);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.content>a {
+    margin: .5rem 0 1.8rem 0;
+    text-decoration: none;
+    color: var(--neutral-desaturated-blue);
+}
+
+.content>a:hover {
+    color: var(--neutral-dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
