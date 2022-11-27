@@ -76,35 +76,41 @@ p {
 }
 
 .trio {
+    width: calc(100% - 3rem);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 1rem;
-    justify-items: center;
-    margin: .3rem 1.5rem;
+    row-gap: 1rem; 
+    margin: .3rem 0;
     background-color: var(--neutral-very-pale-blue);
     border-radius: .7rem;
 }
 
-.trio>* {
-    margin: 0;
+.trio > * {
+    margin: .3rem 0;
     padding: .9rem;
-    align-self: center;
+    place-self: center;
 }
 
-.trio>p {
+.trio img {
+    width: 80px;
+    height: 80px;
+}
+
+.trio > p {
     width: unset;
     padding-left: 0;
 }
 
-.trio>a {
+.trio > a {
     font-size: .8rem;
+    justify-self: end;
 }
 
-.trio>a:hover {
+.trio > a:hover {
     color: var(--primary-button-link-hover);
 }
 
-p>span,
+p > span,
 a {
     font-weight: 700;
     color: var(--neutral-dark-blue);
@@ -127,14 +133,46 @@ button:hover {
     background-color: var(--primary-button-link-hover);
 }
 
-.content>a {
-    margin: .5rem 0 1.8rem 0;
+.content > a {
+    margin: .5rem 0 2rem 0;
     text-decoration: none;
     color: var(--neutral-desaturated-blue);
 }
 
-.content>a:hover {
+.content > a:hover {
     color: var(--neutral-dark-blue);
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        max-width: 407px;
+    }   
+
+    img {
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p,
+    a {
+        font-size: .95rem;
+    }
+
+    .trio {
+        margin-bottom: 1rem;
+    }
+
+    .trio, button {
+        width: calc(100% - 5.7rem);
+    }
+
+    .trio  >  a {
+        padding-right: 1.5rem;
+    }
+    
 }
 
 .attribution {
