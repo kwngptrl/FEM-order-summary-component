@@ -108,6 +108,7 @@ p {
 
 .trio > a:hover {
     color: var(--primary-button-link-hover);
+    text-decoration: none;
 }
 
 p > span,
